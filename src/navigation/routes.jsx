@@ -1,19 +1,10 @@
-import type { ComponentType, JSX } from 'react';
-
 import { IndexPage } from '@/pages/IndexPage/IndexPage';
-import { InitDataPage } from '@/pages/InitDataPage.tsx';
-import { LaunchParamsPage } from '@/pages/LaunchParamsPage.tsx';
-import { ThemeParamsPage } from '@/pages/ThemeParamsPage.tsx';
+import { InitDataPage } from '@/pages/InitDataPage';
+import { LaunchParamsPage } from '@/pages/LaunchParamsPage';
+import { ThemeParamsPage } from '@/pages/ThemeParamsPage';
 import { TONConnectPage } from '@/pages/TONConnectPage/TONConnectPage';
 
-interface Route {
-  path: string;
-  Component: ComponentType;
-  title?: string;
-  icon?: JSX.Element;
-}
-
-export const routes: Route[] = [
+export const routes = [
   { path: '/', Component: IndexPage },
   { path: '/init-data', Component: InitDataPage, title: 'Init Data' },
   { path: '/theme-params', Component: ThemeParamsPage, title: 'Theme Params' },
@@ -41,4 +32,4 @@ export const routes: Route[] = [
       </svg>
     ),
   },
-];
+]; 
